@@ -1,6 +1,12 @@
 import json
 import ast
 
+def read_json(file_path):
+    data = []
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data
+
 def read_jsonl(path):
     data=[]
     with open(path,'r') as f:
